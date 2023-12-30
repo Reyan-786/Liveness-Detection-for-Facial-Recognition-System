@@ -15,7 +15,7 @@ args = argparse.ArgumentParser()
 args.add_argument('-m',"--model", type=str, required=True, help = "[Path to the trained model]")
 
 args.add_argument('-l',"--le", type=str, required=True, help = "[Path to the label encoder pickle file]")
-args.add_argument('-vs',"--videofeed", type = str, required=True, help = "[where do you want the feed feed to come from? if using a webcam specify it else if using a ip cam specify the IP address.. like https://192.182.1.102:9021/video,etc]")
+args.add_argument('-vs',"--videofeed", type = str,  default= 0,help = "[where do you want the feed feed to come from? if using a webcam specify it else if using a ip cam specify the IP address.. like https://192.182.1.102:9021/video,etc]")
 # args.add_argument("-d", "--detector", type=str, required=True,
 # 	help="path to a custom detector")
 args.add_argument("-c", "--confidence", type=float, default=0.5,

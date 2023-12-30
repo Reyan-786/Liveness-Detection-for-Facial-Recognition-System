@@ -1,3 +1,7 @@
 Lib/
 pyvenv.cfg
 Scripts/
+liveness.model
+le.pickle
+dataset/
+videos/
