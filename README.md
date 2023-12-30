@@ -25,21 +25,42 @@ This project utilizes a combination of face detection using MTCNN (Multi-task Ca
 
 ## Usage
 
-1. Clone the repository:
-     `git clone https://github.com/Reyan-786/liveness-detection-system.git`
-2. Upload the video for each class Real and Fake, these would be used for detecting the ROI's from the videos.
-3. Run the gather_data.py:
-        `python gather_data.py --input video/ --output dataset/ --skip 5`
--> this takes 3 arguments:
-       1. `--input` : input video directory.
-       2. `--output` : path of the directory.
-       3. `--skip` : number of frames to skip.
+1. **Clone the Repository:**
 
-4. Once we have obtained the ROI for both real and fake class, we can now train the model using train.py script:
-     `python train.py --dataset dataset/ --model liveness.model --le le.pickle`
-5. Once the model is trained it would be saved as `liveness.model` and the labels would be saved as `le.pickle`.
-6. We can now run the model using live_test.py script using:
-     `python live_test.py --model liveness.model --le le.pickle --videofeed "where the feed is taken from"`
+    ```bash
+    git clone https://github.com/Reyan-786/liveness-detection-system.git
+    ```
+
+2. **Upload Videos for Real and Fake Classes:**
+
+   - Upload video files for each class (`Real` and `Fake`) into the `video/` directory. These videos will be used for detecting Regions of Interest (ROIs) from the videos.
+
+3. **Run `gather_data.py`:**
+
+    ```bash
+    python gather_data.py --input video/ --output dataset/ --skip 5
+    ```
+
+   - This script takes the following arguments:
+     1. `--input`: Input video directory.
+     2. `--output`: Path of the directory to save the ROIs.
+     3. `--skip`: Number of frames to skip.
+
+4. **Train the Model using `train.py` Script:**
+
+    ```bash
+    python train.py --dataset dataset/ --model liveness.model --le le.pickle
+    ```
+
+   - This script trains the model using the dataset and saves the trained model as `liveness.model` and the labels as `le.pickle`.
+
+5. **Run the Model using `live_test.py` Script:**
+
+    ```bash
+    python live_test.py --model liveness.model --le le.pickle --videofeed "source of the video feed"
+    ```
+
+   - This script runs the trained model and displays real or fake labels for each frame of the video feed.
 
 A window will then pop up displaying the real or fake label for each frame of the video.
 
