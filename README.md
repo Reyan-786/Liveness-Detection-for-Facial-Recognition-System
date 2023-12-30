@@ -26,7 +26,7 @@ This project utilizes a combination of face detection using MTCNN (Multi-task Ca
 ## Usage
 
 1. Clone the repository:
-     git clone https://github.com/your-username/liveness-detection-system.git
+     git clone https://github.com/Reyan-786/liveness-detection-system.git
 2. Upload the video for each class Real and Fake, these would be used for detecting the ROI's from the videos.
 3. Run the gather_data.py:
      python gather_data.py --input video/ --output dataset/ --skip 5
