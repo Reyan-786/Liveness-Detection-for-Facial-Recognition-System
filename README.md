@@ -4,7 +4,7 @@ A Python-based liveness detection system using deep learning for face detection 
 
 ## Overview
 
-This project utilizes a combination of face detection using MTCNN (Multi-task Cascaded Convolutional Networks) and liveness detection using a pre-trained deep learning model. The liveness detection model is trained to classify live faces from video streams.
+This project utilizes a combination of face detection using MTCNN (Multi-task Cascaded Convolutional Networks) and liveness detection using a VGG based deep learning model. The liveness detection model is trained to classify live faces from video streams.
 
 ## Prerequisites
 
